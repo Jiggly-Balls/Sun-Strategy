@@ -24,6 +24,15 @@ wheels = [
 ]
 
 [[package]]
+name = "isort"
+version = "6.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b8/21/1e2a441f74a653a144224d7d21afe8f4169e6c7c20bb13aec3a2dc3815e0/isort-6.0.1.tar.gz", hash = "sha256:1cb5df28dfbc742e490c5e41bad6da41b805b0a8be7bc93cd0fb2a8a890ac450", size = 821955 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c1/11/114d0a5f4dabbdcedc1125dee0888514c3c3b16d3e9facad87ed96fad97c/isort-6.0.1-py3-none-any.whl", hash = "sha256:2dc5d7f65c9678d94c88dfc29161a320eec67328bc97aad576874cb4be1e9615", size = 94186 },
+]
+
+[[package]]
 name = "nodejs-wheel-binaries"
 version = "22.14.0"
 source = { registry = "https://pypi.org/simple" }
@@ -37,6 +46,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/2d/a0/43b7316eaf22b4ee9bfb897ee36c724efceac7b89d7d1bedca28057b7be1/nodejs_wheel_binaries-22.14.0-py2.py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:34fa5ed4cf3f65cbfbe9b45c407ffc2fc7d97a06cd8993e6162191ff81f29f48", size = 59808791 },
     { url = "https://files.pythonhosted.org/packages/10/0a/814491f751a25136e37de68a2728c9a9e3c1d20494aba5ff3c230d5f9c2d/nodejs_wheel_binaries-22.14.0-py2.py3-none-win_amd64.whl", hash = "sha256:ca7023276327455988b81390fa6bbfa5191c1da7fc45bc57c7abc281ba9967e9", size = 40478921 },
     { url = "https://files.pythonhosted.org/packages/f4/5c/cab444afaa387dceac8debb817b52fd00596efcd2d54506c27311c6fe6a8/nodejs_wheel_binaries-22.14.0-py2.py3-none-win_arm64.whl", hash = "sha256:fd59c8e9a202221e316febe1624a1ae3b42775b7fb27737bf12ec79565983eaf", size = 36206637 },
+]
+
+[[package]]
+name = "perlin-noise"
+version = "1.13"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bd/1e/571287a516c1ef00d2c65316ffa39ce1078510a015fa72c27338e3ecbfff/perlin_noise-1.13.tar.gz", hash = "sha256:0e0f074743336fbe9cf2cdbdeb74c75d43780a8b3cbc3415859cd396ab4da177", size = 6247 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4d/b2/c7bd5f926f0e2cf3a4cf21c527f6d1b8f43c84bbfcd5aa32f47c7c14cc89/perlin_noise-1.13-py3-none-any.whl", hash = "sha256:09f274c8da38f5a2a48b1626032a1b7738990df758a3bc7549ff3464869c6ca4", size = 5847 },
 ]
 
 [[package]]
@@ -99,23 +117,27 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "game-state" },
+    { name = "perlin-noise" },
     { name = "pygame-ce" },
 ]
 
 [package.dev-dependencies]
 dev = [
     { name = "basedpyright" },
+    { name = "isort" },
     { name = "ruff" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "game-state", specifier = ">=2.0.0" },
+    { name = "perlin-noise", specifier = ">=1.13" },
     { name = "pygame-ce", specifier = ">=2.5.3" },
 ]
 
 [package.metadata.requires-dev]
 dev = [
     { name = "basedpyright", specifier = ">=1.28.1" },
+    { name = "isort", specifier = ">=6.0.1" },
     { name = "ruff", specifier = ">=0.11.0" },
 ]

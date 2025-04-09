@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 import pygame
 from pygame.sprite import Group
 
-from core.config import SCREEN_HEIGHT, SCREEN_WIDTH
+from core.config import SCREEN_HEIGHT, SCREEN_WIDTH, Layers
 
 if TYPE_CHECKING:
     from pygame import Surface
@@ -17,11 +17,11 @@ class Camera(Group):
         self.window = window
         self.offset = pygame.math.Vector2()
 
-    def draw(self, player: Player) -> None:
+    def draw(self, player) -> None:
         self.offset.x = player.rect.centerx - SCREEN_WIDTH / 2
         self.offset.y = player.rect.centery - SCREEN_HEIGHT / 2
 
-        for layer in LAYERS.values():
+        for layer in Layers:
             for sprite in sorted(
                 self.sprites(), key=lambda sprite: sprite.rect.centery
             ):

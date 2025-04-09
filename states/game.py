@@ -13,9 +13,7 @@ if TYPE_CHECKING:
 
 class Game(State):
     def on_setup(self) -> None:
-        self.terrain_tileset = Tileset(
-            "assets/Terrain/Ground/Tilemap_flat.png"
-        )
+        self.terrain_tileset = Tileset("assets/Terrain/Ground/Flat.png")
 
     def process_event(self, event: Event) -> None:
         if event.type == pygame.QUIT:

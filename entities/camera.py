@@ -17,9 +17,9 @@ class Camera(Group):
         self.window = window
         self.offset = pygame.math.Vector2()
 
-    def draw(self, player) -> None:
-        self.offset.x = player.rect.centerx - SCREEN_WIDTH / 2
-        self.offset.y = player.rect.centery - SCREEN_HEIGHT / 2
+    def draw(self, x: int, y: int) -> None:
+        self.offset.x = x - SCREEN_WIDTH / 2
+        self.offset.y = y - SCREEN_HEIGHT / 2
 
         for layer in Layers:
             for sprite in sorted(

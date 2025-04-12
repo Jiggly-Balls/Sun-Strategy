@@ -172,3 +172,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Local file(s) / folder(s)
+spright.conf
+spright.json

@@ -2,7 +2,7 @@ from enum import Enum, IntEnum, auto
 
 TITLE: str = "Sun Strategy"
 FPS: int = 60
-PIXEL_SIZE: int = 32
+PIXEL_SIZE: int = 16
 SCREEN_WIDTH: int = 1366
 SCREEN_HEIGHT: int = 768
 

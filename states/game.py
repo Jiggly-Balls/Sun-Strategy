@@ -10,7 +10,7 @@ from core.tileset import Tileset
 if TYPE_CHECKING:
     from pygame.event import Event
 
-import time
+# import time
 from pprint import pprint
 
 
